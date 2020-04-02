@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+<head>
+<script>
+/*system find function*/
+var array1 = [5, 12, 8, 130, 44];
+
+var isLargeNumber = (element) => element > 13;
+console.log(array1.findIndex(isLargeNumber));
+
+/*Manual filter function*/
+document.write(manfindindex(array1.reverse(),13))
+function manfindindex(arrval,maxval)
+{   var check=true;
+    var temp;
+    countdown(arrval.length);
+    function countdown(value) {
+        
+    if (value > 0) {
+        if((arrval[value-1]=maxval) && (check==true))//condition for every method
+        {
+            check=0;
+            temp=value-2
+        }
+        
+        return countdown(value - 1);
+    } 
+    else {
+        return value;
+    }
+    
+}
+    return temp;
+}
+</script>
+</head>
+<body>
+</body>
+</html>

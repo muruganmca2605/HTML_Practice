@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+<head>
+<script>
+/*system filter function*/
+var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+var result = words.filter(word => word.length > 6);
+
+console.log(result);
+/*Manual filter function*/
+console.log(manfilter(words))
+
+function manfilter(arrval)
+{   var check=[];
+
+    countdown(arrval.length);
+    function countdown(value) {
+        
+    if (value > 0) {
+        if(arrval[value-1].length>6)//condition for every method
+        {
+            check.push(arrval[value-1]);
+        }
+        
+        return countdown(value - 1);
+    } 
+    else {
+        return value;
+    }
+    
+}
+    return check;
+}
+</script>
+</head>
+<body>
+</body>
+</html>

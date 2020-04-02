@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+<head>
+<script>
+/*system flat function*/
+let arrA = [1, 2, 3, 4];
+let arrB = arrA.flatMap(x => [[x * 2]]);
+document.write(arrB);
+/*Manual flat function*/
+document.write( manflatmap(arrA));
+
+function manflatmap(arrval)
+{   var check=[];
+    countdown(arrval.length);
+    function countdown(value) 
+    {
+        
+    if (value > 0) 
+    {
+        
+                check.push(arrval[value-1] *2);
+           
+        return countdown(value - 1);
+    } 
+    else 
+    {
+        return value;
+    }
+    
+}
+    return check.reverse();
+}
+</script>
+</head>
+<body>
+</body>
+</html>

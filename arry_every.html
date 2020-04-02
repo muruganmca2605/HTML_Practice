@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+<head>
+<script>
+/*system every function*/
+var sampleArray = [ 1, 2, 3, 4, 5 ];
+var sampleArray2 = [ 0, -1, -30, 5];
+function tester(number){
+  return number > 0;
+}
+console.log(sampleArray.every(tester)); // returns true
+console.log(sampleArray2.every(tester)); // returns false
+
+/*Manual Every function*/
+document.write(manevery(sampleArray))
+
+function manevery(arrval)
+{   var check=true;
+    countdown(arrval.length);
+    function countdown(value) {
+        
+    if (value > 0) {
+        if(arrval[value-1]>0)//condition for every method
+        {
+            check=check*true;
+        }
+        else
+        {
+            check=check*false;
+        }
+        return countdown(value - 1);
+    } 
+    else {
+        return value;
+    }
+    
+}
+    return check;
+}
+</script>
+</head>
+<body>
+</body>
+</html>

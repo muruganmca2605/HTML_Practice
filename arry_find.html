@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+<head>
+<script>
+/*system find function*/
+var array1 = [5, 12, 8, 130, 44];
+
+var found = array1.find(element => element > 10);
+
+document.write(found);
+/*Manual filter function*/
+document.write(manfind(array1.reverse()))
+
+function manfind(arrval)
+{   var check=true;
+    var temp;
+    countdown(arrval.length);
+    function countdown(value) {
+        
+    if (value > 0) {
+        if((arrval[value-1]>10) && (check==true))//condition for every method
+        {
+            check=0;
+            temp=arrval[value-1]
+        }
+        
+        return countdown(value - 1);
+    } 
+    else {
+        return value;
+    }
+    
+}
+    return temp;
+}
+</script>
+</head>
+<body>
+</body>
+</html>

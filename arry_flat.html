@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+<head>
+<script>
+/*system flat function*/
+var array1 = [5, 12,3,[4,3, 8], 130, 44];
+document.write(array1.flat(););
+/*Manual flat function*/
+document.write( manflat(array1));
+
+function manflat(arrval)
+{   var check=[];
+    countdown(arrval.length);
+    function countdown(value) 
+    {
+        
+    if (value > 0) 
+    {
+        if(arrval[value-1].length>1)//condition for every method
+        {
+            for(var i=0;i<arrval[value-1].length;i++)
+            {
+                check.push(arrval[value-1][i]);
+            }
+           // document.write(check);
+        }
+        else
+        {
+            check.push(arrval[value-1]);
+        }
+        return countdown(value - 1);
+    } 
+    else 
+    {
+        return value;
+    }
+    
+}
+    return check.reverse();
+}
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+<head>
+<script>
+/*system some function*/
+const array = [1, 2, 3, 4, 5];
+
+// checks whether an element is even
+const even = (element) => element % 2 === 0;
+
+document.write(array.some(even));
+
+document.write(mansome(array));
+function mansome(arrval)
+{   var check=false;
+    countdown(arrval.length);
+    function countdown(value) {
+        
+    if (value > 0) {
+        if((arrval[value-1]%2==0) )//condition for every method
+        {
+            check=true;
+        }
+        
+        return countdown(value - 1);
+    } 
+    else {
+        return value;
+    }
+    
+}
+    return check;
+}
+</script>
+</head>
+<body>
+</body>
+</html>
