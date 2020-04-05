@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+<head>
+<script type="text/javascript">
+function mathfunc(func, ...val){
+   return func(...val);
+    
+}
+    function manround(inp1)
+    {
+        inp2=inp1.toString()
+        if(inp2.includes("."))
+        {
+        var n = inp2.substring(inp2.indexOf(".")+1);
+        netval=inp2.substring(0,inp2.indexOf("."));
+      
+        if(parseInt(n)>4)
+        {
+            return parseInt(netval)+1;
+        }
+        else
+        {
+        return parseInt(netval);
+        }
+        }
+        else
+        {
+            return inp2;
+        }
+    }
+    
+    function manpow(inp1,inp2)
+    {
+        return parseInt(inp1)**parseInt(inp2)
+    }
+    function mansqrt(inp1)
+    {
+        return parseInt(inp1)**(.5)
+    }
+    function manabs(inp1)
+    {
+        inp2=inp1.toString()
+        if(inp2.includes("-"))
+        {
+            return inp2.substring(inp2.indexOf("-")+1);
+        }
+        else
+        {
+            return inp2
+        }
+    }
+    function manceil(inp1)
+    {
+        inp2=inp1.toString()
+        if(inp2.includes("."))
+        {
+            var chk = inp2.substring(0,inp2.indexOf("."))
+            return parseInt(chk)+1;
+        }
+        else
+        {
+            return inp2
+        }
+    }
+     function manfloor(inp1)
+    {
+        inp2=inp1.toString()
+        if(inp2.includes("."))
+        {
+            var chk = inp2.substring(0,inp2.indexOf("."))
+            return parseInt(chk);
+        }
+        else
+        {
+            return inp2
+        }
+    }
+    function max(...val){ val.sort(); console.log(val[val.length-1]);}
+    function manmin(...inp)
+    {
+        
+
+    var len = inp.length;
+    var temp;
+    
+    for (var i=0;i<len;i++)
+    {
+        for (var j=i+1;j<len;j++)
+        {
+            if(inp[i]>inp[j])
+            {
+            temp=inp[i];
+            inp[i]=inp[j];
+            inp[j]=temp;
+            }
+        }
+    }
+        return (inp[0]); 
+    }
+    
+    function manmax(...inp)
+    {
+        
+
+    var len = inp.length;
+    var temp;
+    
+    for (var i=0;i<len;i++)
+    {
+        for (var j=i+1;j<len;j++)
+        {
+            if(inp[i]>inp[j])
+            {
+            temp=inp[i];
+            inp[i]=inp[j];
+            inp[j]=temp;
+            }
+        }
+    }
+        return (inp[len-1]); 
+    }
+console.log(mathfunc(manround,334.6));
+console.log(mathfunc(manpow,2,4));
+console.log(mathfunc(mansqrt,16));
+console.log(mathfunc(manabs,-234));
+console.log(mathfunc(manceil,4.1));
+console.log(mathfunc(manfloor,4.1));
+console.log(mathfunc(manmin,7,5,6,7,8,9));
+console.log(mathfunc(manmax,2,3,5,1,7,1));
+
+</script>
+</head>
+<body>
+</body>
+</html>
